@@ -21,6 +21,14 @@ body {
     font-weight: "Bold";
 }
 
+
+/* Animacion OV */
+
+#anim {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 #overlay-light {
     position:absolute;
     width: 100vw;
