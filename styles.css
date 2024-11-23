@@ -4,6 +4,17 @@
     font-weight: 'Bold';
 }
 
+@font-face {
+    font-family: 'EHUSerif' ;
+    src: url(Assets/Fonts/EHUSerif/EHUSerif-Regular.otf);
+    font-weight: 'Regular';
+}
+
+@font-face {
+    font-family: 'Helvetica' ;
+    src: url(Assets/Fonts/Helvetica65MediumMedium/Helvetica65-Medium.ttf);
+    font-weight: 'Regular';
+}
 
 @font-face {
     font-family: 'EHUSans' ;
@@ -18,22 +29,38 @@
 
 body {
     font-family: "EHUSerif", sans-serif;
-    font-weight: "Bold";
+    font-weight: "Regular";
+    height: fit-content;
 }
+
+/* Descripción */
+
+.description {
+display: flex;
+flex-direction: column;
+padding: 2em;
+gap: 2em;
+mix-blend-mode: difference;
+color: #fafafa;
+
+}
+
 
 
 /* Animacion OV */
 
 #anim {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    max-width: 100%;
+    /* margin: 0 auto; */
 }
 
 #overlay-light {
     position:absolute;
     width: 100vw;
     height: 100vh;
-    background: #fff;
+    background: #fafafa;
     z-index:1;
 }
 
@@ -55,13 +82,13 @@ body {
     position: relative;
     z-index: 3;
     mix-blend-mode: difference;
-    color: #fff;
+    color: #fafafa;
 }
 
 .divider {
     width: 100%;
     height: 1px;
-    background: #fff;
+    background: #fafafa;
     margin: 0.2em 0;
 }
 
@@ -76,7 +103,7 @@ body {
 
 .row {
     width: 100%;
-    height: 20px;
+    height: fit-content;
     display: flex;
     padding: 0 2em;
 }
@@ -84,10 +111,27 @@ body {
 .row > .col {
     position: relative;
     flex: 1;
+    height: fit-content;
 }
 
 .row > .col:first.child {
     flex: 2;
+}
+
+/* Segunda parte de contenido */
+.contentb {
+    display: flex;
+    height: 100vh;
+    padding: 1em 0;
+    background-color: #000;
+}
+
+.caretaestatica {
+    object-fit: contain;
+    width: 100%;
+    max-width: 40%;
+    mix-blend-mode:hard-light;
+
 }
 
 .marquee {
@@ -122,8 +166,142 @@ body {
     }
 }
 
-img {
+.content img {
     position: relative;
     top: 40px;
     width: 200px;
+}
+
+
+/* footer */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    height: 100vh;
+    z-index: 4;
+    background-color: #fafafa;
+
+}
+
+.patrocinadores {
+    display: flex;
+    width: auto;
+    max-height: 20vh;
+    bottom: 0;
+    height: fit-content;
+    object-fit: cover;
+    z-index: 4;
+
+}
+
+
+
+/* form */
+
+form {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 4em 2em 0 2em;
+    gap: 1em;
+    background-color: #fafafa;
+}
+
+form > * {
+    border: none;
+}
+
+form legend {
+    font-family: 'Helvetica', sans-serif;
+}
+
+form .fieldsetCheckbox {
+    display: flex;
+
+}
+
+
+form #form-group-checkbox {
+    display: block;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+
+form .form-group {
+    width: 100%;
+}
+
+form textarea {
+    display: inline;
+}
+
+form label {
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+.btn {
+    display: flex;
+    font-family: 'EHUSans';
+    width: 100%;
+    color: #fafafa;
+    background-color: #000;
+    padding: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: scale 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: backgoroundColor 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.btn:hover {
+    background-color: #2c2c2c;
+    scale: 1.02;
+}
+
+
+
+/* mouse scroller */
+
+#mouseIcon {
+    position: fixed;
+    width: 40px;
+    height: 60px;
+    left: 48vw;
+    bottom: 4vh;
+    border: 1px solid #fafafa;
+    border-radius: 50px;
+    mix-blend-mode: difference;
+    z-index: 2;
+
+}
+
+#mouseIcon:after {
+    position: absolute;
+    top: 8%;
+    width: 20%;
+    height: 30%;
+    content: '';
+    left: 38%;
+    align-self: center;
+    background-color: #fafafa;
+    border-radius: 16px;
+    animation: mouse 2s infinite;
+}
+
+@keyframes mouse {
+    0% {
+        opacity: 1;
+        top: 8%;
+    } 
+    100% {
+        opacity: 0;
+        top: 40%;
+    }
+
 }
