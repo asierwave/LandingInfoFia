@@ -25,16 +25,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.from(".row > .col", 2, {
             opacity: 0,
             ease: "power3.inOut",
-            delay: 2,
+            delay: 1,
             stagger: {
                 amount: 1.5,
             },
         });
 
         gsap.from(".marquee", 1, {
-            bottom: "-5%",
+            right: "-50%",
             opacity: "0",
             ease: "power3.inOut",
             delay: 4.5,
         });
 
+
+
+
+
+
+        

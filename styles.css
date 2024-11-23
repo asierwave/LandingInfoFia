@@ -55,13 +55,64 @@ color: #fafafa;
     width: 800px;
     left: -280px;
     position: relative;
-    bottom: 6%;
+    bottom: 4%;
     object-fit: contain;
     height: 100%;
     margin: -0.19em;
     max-width: 800px;
     /* margin: 0 auto; */
 }
+
+#anim2 {
+    display: flex;
+    position: relative;
+    left: 0;
+    width: auto;
+    padding: 0;
+    object-fit:cover;  
+    height: 100%;
+    mix-blend-mode: difference;
+
+}
+
+
+#anim3 {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: fit-content;
+    top: 200px;
+    left: 100px;
+
+
+
+}
+
+#anim4 {
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 40%;
+    left: 35px;
+    z-index: 999;
+
+
+}
+
+#anim5 {
+    display: flex;
+    position: absolute;
+    width: 380px;
+    height: auto;
+    margin-top: -678px;
+    margin-left: -28px;
+    left: 0;
+    z-index: 9999;
+
+
+}
+
+
 
 #overlay-light {
     position:absolute;
@@ -160,10 +211,27 @@ color: #fafafa;
 /* Segunda parte de contenido */
 .contentb {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: auto;
     height: 100vh;
-    padding: 8em 0;
+    align-items: center;
+    padding: 0;
     background-color: #000;
 }
+
+.contentb .description {
+    display: flex;
+    max-width: 100%;
+    height: fit-content;
+    width: 100%;
+    min-width: 70%;
+}
+
+
+
+
 
 .caretaestatica {
     object-fit: contain;
@@ -177,9 +245,165 @@ color: #fafafa;
 /* tercera parte de contenido */
 .contentc {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    height: fit-content;
     padding: 8em 0;
     background-color: #000;
+    color: #fafafa;
+}
+
+.titulo{
+    padding: 0 2em;
+    background-color: #000;
+    z-index: 300px;
+}
+.titulo p {
+    padding: 0 2em;
+    background-color: #000;
+    z-index: 300px;
+
+
+}
+
+
+
+/* Lista y horarios */
+
+.list {
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    transform: perspective(3000px);
+    width: 100%;
+    height: fit-content;
+    z-index: 999999;
+    gap: 0;
+    justify-content: space-between;
+    padding: 2em;
+    color: #fafafa;
+}
+
+.list .item {
+    height: 100px;
+    transition: .5s;
+    cursor: pointer;
+    padding: 1em;
+    filter: brightness(0.6);
+    overflow: hidden;
+
+
+}
+
+.list h2 {
+    position: relative;
+    top: 60%;
+    background-color: #000;
+    padding: 0.5em;
+}
+
+.list p {
+    position: relative;
+    background-color: #fafafa;
+    color: #000;
+    padding: 0.5em;
+    top: 60%;
+}
+
+#item1{
+    background-image: url('Assets/xabier.png.jpg');
+    background-size: cover; /* Optional: makes the image cover the entire background */
+    background-repeat: no-repeat; /* Optional: prevents tiling of the image */
+    background-position: center; /* Optional: centers the image */
+}
+
+#item2{
+    background-image: url('Assets/images/bedia.jpg');
+    background-size: cover; /* Optional: makes the image cover the entire background */
+    background-repeat: no-repeat; /* Optional: prevents tiling of the image */
+    background-position: center; /* Optional: centers the image */
+}
+
+#item3{
+    background-image: url('Assets/images/lola.jpg');
+    background-size: cover; /* Optional: makes the image cover the entire background */
+    background-repeat: no-repeat; /* Optional: prevents tiling of the image */
+    background-position: center; /* Optional: centers the image */
+}
+
+#item4{
+    background-image: url('Assets/images/bedia.jpg');
+    background-size: cover; /* Optional: makes the image cover the entire background */
+    background-repeat: no-repeat; /* Optional: prevents tiling of the image */
+    background-position: center; /* Optional: centers the image */
+}
+
+#item5{
+    background-image: url('Assets/images/miren.jpg');
+    background-size: cover; /* Optional: makes the image cover the entire background */
+    background-repeat: no-repeat; /* Optional: prevents tiling of the image */
+    background-position: center; /* Optional: centers the image */
+}
+
+.list img {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: auto;
+}
+
+
+.list .item:hover{
+    transform: translateZ(200px);
+    filter: brightness(1);
+    height: 300px;
+
+}
+
+.list .item:hover + * {
+    /* transform: translateZ(70px) rotateY(40deg);
+    filter: brightness(0.4); */
+    height: 100px;
+
+
+}
+
+.list .item:hover + * + * {
+    /* transform: translateZ(150px) rotateY(20deg);
+    filter: brightness(0.6); */
+    height: 100px;
+
+}
+
+.list .item:hover + * + * + * {
+    /* transform: translateZ(30px) rotateY(10deg);
+    filter: brightness(0.2); */
+    height: 100px;
+
+
+}
+
+.list .item:has(+ * :hover){
+    /* transform: translateZ(150px) rotateY(-40deg);
+    filter: brightness(0.6); */
+    height: 100px;
+
+
+}
+
+.list .item:has(+ * + *:hover){
+    /* transform: translateZ(70px) rotateY(-20deg);
+    filter: brightness(0.4); */
+    height: 100px;
+
+
+}
+
+.list .item:has(+ * + * + *:hover){
+    /* transform: translateZ(30px) rotateY(-10deg);
+    filter: brightness(0.2); */
+    height: 100px;
+
+
 }
 
 .marquee {
@@ -215,6 +439,44 @@ color: #fafafa;
     }
 }
 
+.marqueefooter {
+    position: relative;
+    bottom: 0; 
+    width: 100%;
+    padding: 4em;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 4;
+    background-color: #fafafa;
+
+}
+
+.marqueefooter span {
+    font-family: "EHUSans";
+    font-weight: 400;
+    letter-spacing:normal;
+    color: #000;
+    gap: 1em;
+    height: fit-content;
+    mix-blend-mode:  normal !important;
+    font-size: 2em;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-left: -10%;
+    animation: marquee-footer-animation 80s linear infinite;
+}
+
+
+
+@keyframes marquee-footer-animation {
+    0% {
+        transform: translate(0,0);
+    } 100% {
+        transform: translate(-100%, 0);
+    }
+}
+
 .content img {
     position: relative;
     top: 40px;
@@ -231,21 +493,15 @@ footer {
     width: 100%;
     padding: 0;
     height: 100vh;
-    z-index: 4;
+    z-index: 8;
     background-color: #fafafa;
 
 }
 
-.patrocinadores {
+footer > * {
     display: flex;
-    width: auto;
-    max-height: 20vh;
-    bottom: 0;
-    height: fit-content;
-    object-fit: cover;
-    z-index: 4;
-
 }
+
 
 
 
@@ -258,6 +514,7 @@ form {
     padding: 4em 2em 0 2em;
     gap: 1em;
     background-color: #fafafa;
+    z-index: 8;
 }
 
 form > * {
@@ -326,7 +583,7 @@ form label {
     border: 1px solid #fafafa;
     border-radius: 50px;
     mix-blend-mode: difference;
-    z-index: 2;
+    z-index: 4;
 
 }
 
