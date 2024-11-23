@@ -55,7 +55,7 @@ color: #fafafa;
     width: 800px;
     left: -280px;
     position: relative;
-    bottom: 7.85%;
+    bottom: 6%;
     object-fit: contain;
     height: 100%;
     margin: -0.19em;
@@ -184,7 +184,7 @@ color: #fafafa;
 
 .marquee {
     position: absolute;
-    bottom: 62%; 
+    bottom: 62.95%; 
     width: 100%;
     padding-top: 4em;
     margin: 0 auto;
