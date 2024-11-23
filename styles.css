@@ -31,6 +31,7 @@ body {
     font-family: "EHUSerif", sans-serif;
     font-weight: "Regular";
     height: fit-content;
+    overflow-x: hidden;
 }
 
 /* Descripción */
@@ -51,8 +52,14 @@ color: #fafafa;
 
 #anim {
     display: flex;
-    position: absolute;
-    max-width: 100%;
+    width: 800px;
+    left: -280px;
+    position: relative;
+    bottom: 7.85%;
+    object-fit: contain;
+    height: 100%;
+    margin: -0.19em;
+    max-width: 800px;
     /* margin: 0 auto; */
 }
 
@@ -69,18 +76,19 @@ color: #fafafa;
     width: 100vw;
     height: 100vh;
     background: #000;
-    z-index:2;
+    z-index:3;
 }
 
 .content {
     width: 100% ;
     height: 100vh;
     padding: 1em 0;
+    overflow: hidden;
 }
 
 .content > * {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     mix-blend-mode: difference;
     color: #fafafa;
 }
@@ -89,7 +97,9 @@ color: #fafafa;
     width: 100%;
     height: 1px;
     background: #fafafa;
-    margin: 0.2em 0;
+    /* margin: 0.2em 0; */
+    margin-top: 1em;
+
 }
 
 .nav {
@@ -97,52 +107,91 @@ color: #fafafa;
 }
 
 .nav-divider {
-    margin-top: 1em;
+    /* margin-top: 1em; */
+    margin: 0;
 
 }
 
 .row {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: fit-content;
-    display: flex;
-    padding: 0 2em;
+    padding: 0.5em 2em;
+
+    justify-content: space-between;
 }
 
 .row > .col {
+    display: flex;
     position: relative;
-    flex: 1;
+    width: fit-content;
+    /* flex: 1; */
     height: fit-content;
+
 }
 
 .row > .col:first.child {
     flex: 2;
+
+}
+
+
+/* Botón idioma */
+
+.btnLanguage {
+    display: flex;
+    height: 4px;
+    width: fit-content;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    z-index: 99999;
+    align-items: center;
+
+}
+
+.btnLanguage:hover {
+   font-weight: bold;
+   scale: 1.01;
+    
 }
 
 /* Segunda parte de contenido */
 .contentb {
     display: flex;
     height: 100vh;
-    padding: 1em 0;
+    padding: 8em 0;
     background-color: #000;
 }
 
 .caretaestatica {
     object-fit: contain;
-    width: 100%;
+    width: 30%;
     max-width: 40%;
     mix-blend-mode:hard-light;
 
 }
 
+
+/* tercera parte de contenido */
+.contentc {
+    display: flex;
+    height: 100vh;
+    padding: 8em 0;
+    background-color: #000;
+}
+
 .marquee {
     position: absolute;
-    bottom: 10%;
+    bottom: 62%; 
     width: 100%;
     padding-top: 4em;
     margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
-    z-index: 3;
+    z-index: 4;
+
 }
 
 .marquee span {
