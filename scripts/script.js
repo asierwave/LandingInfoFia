@@ -106,11 +106,13 @@
 // Cargar la segunda animación en el contenedor #anim2
 var animation2 = lottie.loadAnimation({
   container: document.getElementById('anim2'),
-  renderer: 'canvas',
+  renderer: 'svg',
   loop: true, // No en bucle
   autoplay: true, // Se reproduce automáticamente
   path: './careta.json', // Ruta al archivo JSON de la segunda animación
 });
+
+
 
 
 
@@ -190,3 +192,31 @@ gsap.to(animation5, {
     }
   }
 });
+
+
+
+// Para entrada de anim5 cable izquierda
+
+// Inicializa la animación Lottie en #anim6
+var animation6 = lottie.loadAnimation({
+  container: document.getElementById('anim6'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: false, // No se reproducirá automáticamente
+  path: './lineasbajas.json', // Reemplaza con la ruta correcta a tu archivo JSON
+});
+
+// Sincronizar la animación con el desplazamiento usando ScrollTrigger
+gsap.to(animation6, {
+  scrollTrigger: {
+    trigger: ".contentb", // Activador para este elemento (debe ser #anim5)
+    start: "top -200px", // Inicia cuando la parte superior de #anim5 entra en el viewport
+    end: "bottom -200px", // Termina cuando la parte inferior de #anim5 sale del viewport
+    scrub: 1, // Hacer que la animación siga al desplazamiento de manera fluida
+    onUpdate: (self) => {
+      // Sincroniza la animación de Lottie con el progreso del scroll
+      animation6.goToAndStop(self.progress * animation6.totalFrames, true);
+    }
+  }
+});
+
