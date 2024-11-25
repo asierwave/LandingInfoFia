@@ -32,6 +32,7 @@ body {
     font-weight: "Regular";
     height: fit-content;
     overflow-x: hidden;
+
 }
 
 /* Descripción */
@@ -44,6 +45,7 @@ gap: 2em;
 mix-blend-mode: difference;
 color: #fafafa;
 
+
 }
 
 
@@ -55,12 +57,14 @@ color: #fafafa;
     width: 800px;
     left: -280px;
     position: relative;
-    bottom: 4%;
+    bottom: 3%;
     object-fit: contain;
     height: 100%;
     margin: -0.19em;
     max-width: 800px;
     /* margin: 0 auto; */
+    will-change: transform; /* Mejora el rendimiento */
+
 }
 
 #anim2 {
@@ -72,6 +76,9 @@ color: #fafafa;
     object-fit:cover;  
     height: 100%;
     mix-blend-mode: difference;
+    will-change: transform; /* Mejora el rendimiento */
+
+
 
 }
 
@@ -83,6 +90,9 @@ color: #fafafa;
     height: fit-content;
     top: 200px;
     left: 100px;
+    will-change: transform; /* Mejora el rendimiento */
+
+
 
 
 
@@ -95,6 +105,8 @@ color: #fafafa;
     top: 40%;
     left: 35px;
     z-index: 999;
+    will-change: transform; /* Mejora el rendimiento */
+
 
 
 }
@@ -108,6 +120,8 @@ color: #fafafa;
     margin-left: -28px;
     left: 0;
     z-index: 9999;
+    will-change: transform; /* Mejora el rendimiento */
+
 
 
 }
@@ -142,6 +156,8 @@ color: #fafafa;
     z-index: 4;
     mix-blend-mode: difference;
     color: #fafafa;
+
+
 }
 
 .divider {
@@ -150,6 +166,7 @@ color: #fafafa;
     background: #fafafa;
     /* margin: 0.2em 0; */
     margin-top: 1em;
+
 
 }
 
@@ -216,6 +233,7 @@ color: #fafafa;
     justify-content: space-between;
     gap: auto;
     height: 100vh;
+    overflow: hidden;
     align-items: center;
     padding: 0;
     background-color: #000;
@@ -227,29 +245,38 @@ color: #fafafa;
     height: fit-content;
     width: 100%;
     min-width: 70%;
+    overflow: hidden;
+    backdrop-filter: blur(10);
+    background-color: #000;
 }
 
 
 
-
-
-.caretaestatica {
-    object-fit: contain;
-    width: 30%;
-    max-width: 40%;
-    mix-blend-mode:hard-light;
-
-}
 
 
 /* tercera parte de contenido */
 .contentc {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: fit-content;
     padding: 8em 0;
+    gap: 2em;
     background-color: #000;
     color: #fafafa;
+
+}
+
+.direccion {
+    font-family: EHUSans;
+    font-size: 0.8em;
+    font-weight: regular;
+}
+
+
+.map-container {
+    width: 100%;
+    max-width: 45%;
+    padding: 0 2em;
 }
 
 .titulo{
@@ -281,6 +308,7 @@ color: #fafafa;
     justify-content: space-between;
     padding: 2em;
     color: #fafafa;
+
 }
 
 .list .item {
@@ -353,7 +381,7 @@ color: #fafafa;
 
 
 .list .item:hover{
-    transform: translateZ(200px);
+    /* transform: translateZ(200px); */
     filter: brightness(1);
     height: 300px;
 
@@ -435,14 +463,17 @@ color: #fafafa;
     0% {
         transform: translate(0,0);
     } 100% {
-        transform: translate(-100%, 0);
+        transform: translate(-120%, 0);
     }
 }
 
 .marqueefooter {
+    display: flex;
+    flex-direction: row;
     position: relative;
     bottom: 0; 
     width: 100%;
+    gap: 0;
     padding: 4em;
     margin: 0 auto;
     white-space: nowrap;
@@ -450,15 +481,26 @@ color: #fafafa;
     z-index: 4;
     background-color: #fafafa;
 
+
+}
+
+.marqueefooter h2 {
+height: 100%;
+font-size: 16px;
+margin-bottom: 2em;
+border-bottom: 1px solid #000;
+align-items: center;
 }
 
 .marqueefooter span {
+    display: flex;
     font-family: "EHUSans";
+    flex-direction: row;
     font-weight: 400;
     letter-spacing:normal;
     color: #000;
-    gap: 1em;
     height: fit-content;
+    align-items: center;
     mix-blend-mode:  normal !important;
     font-size: 2em;
     text-transform: uppercase;
@@ -481,6 +523,7 @@ color: #fafafa;
     position: relative;
     top: 40px;
     width: 200px;
+
 }
 
 
@@ -492,9 +535,10 @@ footer {
     flex-direction: column;
     width: 100%;
     padding: 0;
-    height: 100vh;
+    height: fit-content;
     z-index: 8;
     background-color: #fafafa;
+
 
 }
 
@@ -509,12 +553,13 @@ footer > * {
 
 form {
     display: flex;
-    height: 100%;
+    height: fit-content;
     flex-direction: column;
     padding: 4em 2em 0 2em;
     gap: 1em;
     background-color: #fafafa;
     z-index: 8;
+    overflow: hidden;
 }
 
 form > * {
@@ -580,10 +625,12 @@ form label {
     height: 60px;
     left: 48vw;
     bottom: 4vh;
+    background-color: #000;
     border: 1px solid #fafafa;
     border-radius: 50px;
-    mix-blend-mode: difference;
+    mix-blend-mode: normal;
     z-index: 4;
+
 
 }
 
@@ -611,3 +658,36 @@ form label {
     }
 
 }
+
+@media screen and (max-width: 800px) {
+
+.contentc {
+    flex-direction: column;
+}
+
+.map-container {
+    max-width: 100%;
+}
+}
+
+@media screen and (max-width: 400px) {
+
+
+
+    #anim5 {
+        width: 100%;
+
+    }
+  
+    .contentb {
+    flex-direction: column; 
+    height: fit-content; 
+  }
+
+  .contentb .description {
+    height: fit-content;
+  }
+  
+
+  }
+  

@@ -56,7 +56,7 @@
      // Cargar la animación de Lottie
   var animation1 = lottie.loadAnimation({
     container: document.getElementById('anim'),
-    renderer: 'svg',
+    renderer: 'canvas',
     loop: false, // Sin bucle inicial
     autoplay: false, // No se reproduce automáticamente
     path: 'OV1.json', // Ruta al archivo JSON de la animación
@@ -106,7 +106,7 @@
 // Cargar la segunda animación en el contenedor #anim2
 var animation2 = lottie.loadAnimation({
   container: document.getElementById('anim2'),
-  renderer: 'svg',
+  renderer: 'canvas',
   loop: true, // No en bucle
   autoplay: true, // Se reproduce automáticamente
   path: './careta.json', // Ruta al archivo JSON de la segunda animación
@@ -117,7 +117,7 @@ var animation2 = lottie.loadAnimation({
 // Cargar la tercera animación en el contenedor #anim3
 var animation3 = lottie.loadAnimation({
   container: document.getElementById('anim3'),
-  renderer: 'svg',
+  renderer: 'canvas',
   loop: true, // en bucle
   autoplay: true, // Se reproduce automáticamente
   path: './ojo.json', // Ruta al archivo JSON de la segunda animación
@@ -127,7 +127,7 @@ var animation3 = lottie.loadAnimation({
 // Cargar la cuarta animación en el contenedor #anim4
 var animation4 = lottie.loadAnimation({
   container: document.getElementById('anim4'),
-  renderer: 'svg',
+  renderer: 'canvas',
   loop: true, // en bucle
   autoplay: true, // Se reproduce automáticamente
   path: './ojoin.json', // Ruta al archivo JSON de la segunda animación
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Inicializa la animación Lottie en #anim5
 var animation5 = lottie.loadAnimation({
   container: document.getElementById('anim5'),
-  renderer: 'svg',
+  renderer: 'canvas',
   loop: true,
   autoplay: false, // No se reproducirá automáticamente
   path: './cable5.json', // Reemplaza con la ruta correcta a tu archivo JSON
