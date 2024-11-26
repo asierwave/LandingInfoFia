@@ -34,6 +34,18 @@
 </head>
 <body>
     
+        <!-- MENU -->
+
+        <div class="menu">
+            <div class="submenu">
+                <a href="#a2" class="menucard"><h2>El Evento</h2><h2>></h2></a>
+                <a href="#a3" class="menucard"><h2>Programa</h2><h2>></h2></a>
+                <a href="#a4" class="menucard"><h2>Asiste</h2><h2>></h2></a>
+                <a href="https://filosofiacst.net/" target="_blank" class="menucard"><h2>Máster FCST</h2><h2>></h2></a>
+            </div>
+        </div>
+        
+   <main>
     
 <!-- Pantalla absoluta negra -->
 <div id="overlay-dark">    
@@ -54,7 +66,10 @@
 
 
              <!-- Mouse scroller -->
-             <div id="mouseIcon"></div>
+             <button class="menu-toggle" id="mouseIcon" onclick="toggleMenu()">       
+              <h4>☰</h4>  
+        </button>
+ 
 
   
 <nav>
@@ -94,14 +109,11 @@
 
     </nav>      
 
-    <div class="menu">
-        <div class="submenu">
-            <a href="#a2"  class="menucard"><h2 >El Evento</h2><h2>></h2></a>
-        <a href="#a3" class="menucard"><h2>Programa</h2><h2>></h2></a>
-        <a href="#a4" class="menucard"><h2>Asiste</h2><h2>></h2></a>
-        <a href="https://filosofiacst.net/" target="_blank" class="menucard"><h2>Máster FCST</h2><h2>></h2></a>
 
-    </div>
+
+
+    
+
               <!-- <div class="divider"></div> -->
               <div id="anim"></div>
               <!-- <div id="anim4"></div> -->
@@ -212,8 +224,10 @@
 <div class="list">
     <div class="titulo">
         <h3>18:00 – 19:00 Mesa Redonda</h3>
+    </div>
+    
+    <div class="item">
         <h3>Lo social y lo tecnológico: oportunidades e impacto de la IA en la actualidad</h3>
-
     </div>
 
     <div class="item" id="item4">
@@ -254,7 +268,7 @@
         <img src="Assets/images/informatika.jpeg" alt="Imagen de la facultad de informática de la UPV/EHU Donostia">
         <a href="https://www.google.com/maps/dir/?api=1&destination=43.30735807575452, -2.010610098144701" target="_blank" class="btn-mapa"> Cómo Llegar </a>
 
-        <h4>
+        <p>
                Esta jornada promete ser una valiosa oportunidad para explorar y comprender mejor los múltiples aspectos de la IA, tanto para especialistas como para el público en general. ¡Te esperamos para formar parte de este diálogo tan relevante y actual!</h4>
    
             </div>
@@ -340,21 +354,29 @@
     <footer>
 
 
-   <!-- Texto corrido -->
-   <div class="marqueefooter">
-    <span>  <img src="Assets/images/Organizan.png"style="height: 80px;" alt="">
+  <!-- Texto corrido -->
+<div class="marqueefooter">
+    <span>
+        <img src="Assets/images/Organizan.png" style="height: 80px;" alt="">
         <img src="Assets/images/iconehuinfor.png" style="height: 80px;" alt="">  
-  <img src="Assets/images/ehuinfofiloall.png" style="height: 80px;" alt="">    
-  <img src="Assets/images/patrocinan.png" style="height: 80px;" alt="">
+        <img src="Assets/images/ehuinfofiloall.png" style="height: 80px;" alt="">    
+        <img src="Assets/images/patrocinan.png" style="height: 80px;" alt="">
         <img src="Assets/images/iconespaina.png" style="height: 80px;" alt=""> 
-        <img src="Assets/images/icongipuzkoa.png" style="height: 80px;" alt=""> 
+        <img src="Assets/images/icongipuzkoa.png" style="height: 80px;" alt="">
+        <!-- Duplicamos el contenido para el efecto infinito -->
+        <img src="Assets/images/Organizan.png" style="height: 80px;" alt="">
+        <img src="Assets/images/iconehuinfor.png" style="height: 80px;" alt="">  
+        <img src="Assets/images/ehuinfofiloall.png" style="height: 80px;" alt="">    
+        <img src="Assets/images/patrocinan.png" style="height: 80px;" alt="">
+        <img src="Assets/images/iconespaina.png" style="height: 80px;" alt=""> 
+        <img src="Assets/images/icongipuzkoa.png" style="height: 80px;" alt="">
     </span>
-  
 </div>
 
 
-    </footer>
 
+    </footer>
+</main>
 
  <!-- Animación OV1 -->
  <script src="./scripts/script.js"></script>
@@ -371,7 +393,7 @@
   <script src="./scripts/blockScroll.js"></script>
 
 
-   
+
 
 </body>
 </html>

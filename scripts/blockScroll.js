@@ -23,3 +23,57 @@ setTimeout(() => {
   body.style.overflow = "auto"; // Habilitar el scroll
   body.style.height = "auto"; // Devolver a su altura original
 },0);
+
+
+// menu
+
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  const body = document.body;
+
+  // Alternar el menú al hacer clic en el botón de alternancia
+  if (menu.classList.contains('open')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+}
+
+function openMenu() {
+  const menu = document.querySelector('.menu');
+  const body = document.body;
+  const main = document.querySelector('main');
+
+
+  menu.classList.add('open');
+  body.classList.add('menu-open');
+  main.style.marginTop='260px';
+
+}
+
+function closeMenu() {
+  const menu = document.querySelector('.menu');
+  const body = document.body;
+  const main = document.querySelector('main');
+
+
+  menu.classList.remove('open');
+  body.classList.remove('menu-open');
+  main.style.marginTop='0';
+
+}
+
+// Detectar clics fuera del menú y cerrarlo
+document.addEventListener('click', (event) => {
+  const menu = document.querySelector('.menu');
+  const toggleButton = document.querySelector('.menu-toggle');
+
+  if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+    closeMenu();
+  }
+});
+
+// Cerrar el menú al hacer clic en un enlace
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
