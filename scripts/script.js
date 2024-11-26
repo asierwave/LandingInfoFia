@@ -119,17 +119,17 @@ var animation2 = lottie.loadAnimation({
 // Cargar la tercera animación en el contenedor #anim3
 var animation3 = lottie.loadAnimation({
   container: document.getElementById('anim3'),
-  renderer: 'canvas',
+  renderer: 'svg',
   loop: true, // en bucle
   autoplay: true, // Se reproduce automáticamente
-  path: './ojo.json', // Ruta al archivo JSON de la segunda animación
+  path: './ojoin.json', // Ruta al archivo JSON de la segunda animación
 });
 
 
 // Cargar la cuarta animación en el contenedor #anim4
 var animation4 = lottie.loadAnimation({
   container: document.getElementById('anim4'),
-  renderer: 'canvas',
+  renderer: 'svg',
   loop: true, // en bucle
   autoplay: true, // Se reproduce automáticamente
   path: './ojoin.json', // Ruta al archivo JSON de la segunda animación

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.to("#overlay-dark", 2, {
             top:"-100%",
             ease: "power3.inOut",
-            delay: 4,
+            delay: 2,
         });
 
         gsap.from(".divider", 3, {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             right: "-50%",
             opacity: "0",
             ease: "power3.inOut",
-            delay: 4.5,
+            delay: 2,
         });
 
 

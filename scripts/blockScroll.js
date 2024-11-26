@@ -22,4 +22,4 @@ setTimeout(() => {
 setTimeout(() => {
   body.style.overflow = "auto"; // Habilitar el scroll
   body.style.height = "auto"; // Devolver a su altura original
-},4000);
+},0);
