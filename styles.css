@@ -420,6 +420,7 @@ nav {
     height: fit-content;
     background-color: #000;
     color: #fafafa;
+    z-index: 999999;
 
 }
 
@@ -538,6 +539,11 @@ a {
     margin-top: 0.5em;
     color: #6d6d6d;
 
+
+}
+
+#item1 {
+    cursor: url('Assets/images/globe.svg'), auto;
 
 }
 
