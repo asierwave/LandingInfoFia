@@ -18,7 +18,7 @@ elements.forEach((element) => {
       duration: 1.2,
       scrollTrigger: {
         trigger: element, // El elemento activa su propia animación
-        start: "top 85%", // Inicia cuando el elemento está al 85% del viewport
+        start: "top 92%", // Inicia cuando el elemento está al 85% del viewport
         end: "top 80%",   // Termina al 60% del viewport
         scrub: 2,      // Sincroniza la animación con el scroll
         toggleActions: "play none none reverse", // Animación reversible al scrollear hacia arriba
