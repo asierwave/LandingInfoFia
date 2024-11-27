@@ -229,6 +229,7 @@ color: #fafafa;
     transition: top 0.3s ease; /* Animación de apertura */
     z-index: 99999;
     background-color: #fafafa;
+    border-bottom: 1px solid #000;
 }
 
 .menu.open {
