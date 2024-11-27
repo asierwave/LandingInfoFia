@@ -77,3 +77,20 @@ document.addEventListener('click', (event) => {
 document.querySelectorAll('.menu a').forEach(link => {
   link.addEventListener('click', closeMenu);
 });
+
+
+// táctiles
+
+// Selecciona todos los elementos usando querySelectorAll con una lista de selectores
+const botones = document.querySelectorAll('#item1, .btn-mapa, .btn, .menucard');
+
+// Itera sobre cada elemento seleccionado
+botones.forEach(boton => {
+  boton.addEventListener('touchstart', () => {
+    boton.classList.add('activo'); // Agrega la clase "activo" al elemento tocado
+  });
+
+  boton.addEventListener('touchend', () => {
+    boton.classList.remove('activo'); // Elimina la clase "activo" cuando se suelta
+  });
+});

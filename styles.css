@@ -27,6 +27,13 @@
     box-sizing: border-box;
 }
 
+@media (hover: none) {
+    .elemento:hover {
+      transform: none;
+    }
+  }
+  
+
 html {
     scroll-behavior: smooth;
 
@@ -261,6 +268,11 @@ color: #fafafa;
     scale: 1.01;
 }
 
+.menucard.activo {
+    background-color: #f0f0f0;
+    scale: 1.01;
+}
+
 
 
 /* Contenedor principal que empuja el contenido */
@@ -353,6 +365,12 @@ nav {
 }
 
 .btn-mapa:hover {
+    background-color: #2c2c2c;
+    color: #fafafa;
+    scale: 1.02;
+}
+
+.btn-mapa.activo {
     background-color: #2c2c2c;
     color: #fafafa;
     scale: 1.02;
@@ -539,7 +557,7 @@ a {
     font-size: 1em;
     margin-top: 0.5em;
     color: #6d6d6d;
-
+    transition: border 2s linear;
 
 }
 
@@ -547,6 +565,17 @@ a {
     cursor: url('Assets/images/globe.svg'), auto;
 
 }
+
+#item1:hover {
+    border: 6px solid #fafafa;
+    filter: brightness(1.1);
+}
+
+#item1.activo {
+    border: 6px solid #fafafa;
+    filter: brightness(1.1);
+}
+
 
 
 /* Manuel y Lola */
@@ -828,6 +857,12 @@ form label input {
     color: #000;
 }
 
+.btn.activo {
+    background-color: #cacaca;
+    color: #000;
+}
+
+
 
 
 /* mouse scroller y menú */
@@ -888,6 +923,10 @@ form label input {
 
 @media screen and (max-width: 800px) {
 
+#mouseIcon{
+    left: 44vw;
+}
+
 .contentc {
     flex-direction: column;
     gap: 2em;
@@ -930,7 +969,9 @@ form input {
 @media screen and (max-width: 400px) {
 
 
-
+    #mouseIcon{
+        left: 42vw;
+    }
     
 
     #anim5 {
