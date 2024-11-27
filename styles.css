@@ -229,7 +229,7 @@ color: #fafafa;
     transition: top 0.3s ease; /* Animación de apertura */
     z-index: 99999;
     background-color: #fafafa;
-    border-bottom: 1px solid #000;
+    border-bottom: 1.4px solid #000;
 }
 
 .menu.open {
@@ -834,27 +834,29 @@ form label input {
 
 #mouseIcon {
     position: fixed;
-    width: 40px;
+    width: 60px;
     height: 60px;
     left: 46vw;
     bottom: 4vh;
     background-color: #000;
+    color: #fafafa;
     border: 2px solid #fafafa;
     border-radius: 50px;
     mix-blend-mode: normal !important;
     z-index: 2;
     font-size: 1.6em;
     opacity: 0;
-    transition: scale 2s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     overflow: hidden;
     z-index: 9999999;
-
-
+    transition: transform 4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #mouseIcon:hover {
-    scale: 1.1;
+    transform: scale(1.1); /* Aumenta el tamaño al 150% */
+    background-color: #fafafa;
+    color: #000;
+    border: 2px solid #000;
 }
 
 /* #mouseIcon:after {
