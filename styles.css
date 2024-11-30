@@ -48,7 +48,7 @@ html {
     flex-direction: row;
     background-color: #000;
     color: #fafafa;
-    overflow: hidden;
+    overflow-x: auto;
     width: 100%;
     align-items: center;
     mix-blend-mode: difference;
@@ -1062,6 +1062,11 @@ form label input {
     overflow: hidden;
     z-index: 9999999;
     transition: scale 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.mouseIconIcon {
+    filter: brightness(100);
 }
 
 @media screen and (min-width: 800px) {
