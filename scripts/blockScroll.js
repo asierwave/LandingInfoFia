@@ -25,7 +25,14 @@ setTimeout(() => {
 },0);
 
 
-// menu
+
+
+
+
+
+
+
+// menu y cambio mouse icon
 
 function toggleMenu() {
   const menu = document.querySelector('.menu');
@@ -43,11 +50,17 @@ function openMenu() {
   const menu = document.querySelector('.menu');
   const body = document.body;
   const main = document.querySelector('main');
+  const IconMouse = document.querySelector('.mouseIconIcon');
+
 
 
   menu.classList.add('open');
   body.classList.add('menu-open');
-  main.style.marginTop='260px';
+  // main.style.marginTop='260px';
+  main.style.marginTop='300px';
+  IconMouse.innerHTML = "&#10006;";
+
+
 
 }
 
@@ -55,18 +68,28 @@ function closeMenu() {
   const menu = document.querySelector('.menu');
   const body = document.body;
   const main = document.querySelector('main');
+  const IconMouse = document.querySelector('.mouseIconIcon');
+
 
 
   menu.classList.remove('open');
   body.classList.remove('menu-open');
   main.style.marginTop='0';
+  IconMouse.innerHTML = "&#9776";
+
+
+
+
+
 
 }
+
 
 // Detectar clics fuera del menú y cerrarlo
 document.addEventListener('click', (event) => {
   const menu = document.querySelector('.menu');
   const toggleButton = document.querySelector('.menu-toggle');
+
 
   if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
     closeMenu();
@@ -79,7 +102,12 @@ document.querySelectorAll('.menu a').forEach(link => {
 });
 
 
-// táctiles
+
+
+
+
+
+// PANTALLAS TÁCTILES PROBLEMA HOVER
 
 // Selecciona todos los elementos usando querySelectorAll con una lista de selectores
 const botones = document.querySelectorAll('#item1, .btn-mapa, .btn, .menucard');
@@ -93,4 +121,68 @@ botones.forEach(boton => {
   boton.addEventListener('touchend', () => {
     boton.classList.remove('activo'); // Elimina la clase "activo" cuando se suelta
   });
+});
+
+
+
+
+
+
+
+
+// NAV MASTER FILOSOFIA 
+
+
+const navMasterButton1 = document.querySelector('.navMasterButton1');
+const navMasterButton2 = document.querySelector('.navMasterButton2');
+const navMasterList = document.querySelector ('.navMasterList')
+
+navMasterButton1.addEventListener('click', () => {
+  navMasterList.style.margin = '0 0 0 -89vw';
+  navMasterList.style.width = 'fit-content';
+  navMasterList.style.justifyContent = 'flex-end';
+  navMasterList.style.right = '0';
+
+
+  navMasterButton1.style.display='none';
+  navMasterButton2.style.display='flex';
+
+});
+
+navMasterButton2.addEventListener('click', () => {
+  navMasterList.style.margin = '0 0 0 0';
+  navMasterButton2.style.display='none';
+  navMasterButton1.style.display='flex';
+
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 800) {
+    navMasterList.style.margin='0 0 0 0';
+    navMasterButton1.style.display='none';
+    navMasterButton2.style.display='none';
+  } else {
+    navMasterButton1.style.display='flex';
+    navMasterList.style.margin='0 0 0 0';
+  }
+});
+
+
+
+
+
+
+// Hacer desaparecer MouseIcon al final de la pág
+
+document.addEventListener('scroll', () => {
+  const mouse = document.querySelector('#mouseIcon'); 
+  const scrollTop = window.scrollY; 
+  const windowHeight = window.innerHeight; 
+  const documentHeight = document.documentElement.scrollHeight; 
+
+  if (scrollTop + windowHeight >= documentHeight) {
+      mouse.style.opacity = '0';
+  } else {
+      mouse.style.opacity = '1'; 
+  }
 });
