@@ -473,10 +473,14 @@ nav {
     transition: backgoroundColor 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+@media screen and (min-width: 800px) {
+
+
 .btn-mapa:hover {
     background-color: #2c2c2c;
     color: #fafafa;
     scale: 1.02;
+}
 }
 
 .btn-mapa.activo {
@@ -496,6 +500,7 @@ nav {
     align-items: center;
 
 }
+
 
 .btnLanguage:hover {
    font-weight: bold;
