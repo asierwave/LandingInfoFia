@@ -81,7 +81,7 @@ html {
     right: 0;
 }
 
-@media (hover: hover) {
+@media screen and (min-width: 800px) {
 
 
 
@@ -690,7 +690,7 @@ a {
 
 }
 
-@media (hover:hover) {
+@media screen and (min-width: 800px) {
 
 #item1:hover > * {
     filter: brightness(1.1);
@@ -709,13 +709,13 @@ a {
 
 }
 
-/* #item1:active {
+#item1:active {
     filter: brightness(1.1);
     background-color: #fafafa;
     color: #000;
     border-bottom: 1px solid #000;
     margin: 0;
-} */
+}
 
 
 
@@ -1019,7 +1019,7 @@ form label input {
 
 }
 
-@media (hover: hover) {
+@media screen and (min-width: 800px) {
 
 
 .btn:hover {
@@ -1059,7 +1059,7 @@ form label input {
     transition: scale 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-@media (hover: hover) {
+@media screen and (min-width: 800px) {
 
 
 #mouseIcon:hover {
