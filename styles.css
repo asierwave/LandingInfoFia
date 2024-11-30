@@ -690,7 +690,7 @@ a {
 
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
 
 #item1:hover > * {
     filter: brightness(1.1);
@@ -709,13 +709,13 @@ a {
 
 }
 
-#item1:active {
+/* #item1:active {
     filter: brightness(1.1);
     background-color: #fafafa;
     color: #000;
     border-bottom: 1px solid #000;
     margin: 0;
-}
+} */
 
 
 
