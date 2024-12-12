@@ -162,6 +162,18 @@ body {
 
 }
 
+
+
+
+.enlaceTransmision{
+    color: #010101;
+}
+
+.enlaceTransmision:hover{
+    text-decoration: underline;
+    color: #6d6d6d;
+}
+
 main {
     top: 0;
     font-family: "EHUSerif", sans-serif;
@@ -219,6 +231,35 @@ color: #fafafa;
 
 
 }
+
+
+#anim9 {
+    display: flex;
+    position: absolute;
+    mix-blend-mode: difference;
+    width: 450px;
+    height: auto;
+    top: 20rem;
+    right: 1vw;
+    top: 55vh;
+    scale: 1;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    cursor: pointer;
+    height: auto;
+    transition: scale 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+
+
+}
+
+#anim9:hover {
+    scale: 1.04;
+    filter: invert(0.9);
+}
+
+
 
 #anim2 {
     display: flex;
@@ -758,7 +799,7 @@ a {
 
 
 .mensajeinfo {
-    display: flex;
+    display: none;
     flex-direction: row;
     width: 100%;
     padding: 1em 0;
@@ -1027,6 +1068,7 @@ form label input {
 @media screen and (min-width: 800px) {
 
 
+
 .btn:hover {
     background-color: #cacaca;
     color: #000;
@@ -1115,6 +1157,15 @@ form label input {
 
 
 @media screen and (max-width: 800px) {
+
+.mensajeinfo {
+    display: flex;
+}
+
+
+#anim9 {
+    display: none;
+}
 
 #mouseIcon{
     left: 44vw;

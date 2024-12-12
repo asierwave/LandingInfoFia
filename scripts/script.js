@@ -50,10 +50,11 @@
 //   var newSpeed = 1 + scrollPercent * maxSpeed; // La velocidad aumenta con el desplazamiento
 //   animation1.setSpeed(newSpeed); // Establece la nueva velocidad de la animación
 // });
-// Cargar la animación de Lottie
-  // Cargar la animación de Lottie
-   // Cargar la animación de Lottie
-     // Cargar la animación de Lottie
+
+
+
+
+
   var animation1 = lottie.loadAnimation({
     container: document.getElementById('anim'),
     renderer: 'canvas',
@@ -220,3 +221,48 @@ gsap.to(animation6, {
   }
 });
 
+
+
+
+
+var animation9 = lottie.loadAnimation({
+  container: document.getElementById('anim9'),
+  renderer: 'svg',
+  loop: false, // Sin bucle inicial
+  autoplay: false, // No se reproduce automáticamente
+  path: 'circle.json', // Ruta al archivo JSON de la animación
+});
+
+animation9.addEventListener('DOMLoaded', function () {
+  var totalFrames = animation1.totalFrames;
+  var startLoopFrame = totalFrames - 73; // Frame donde comienza el bucle
+  var duration = 9; // Duración en segundos para llegar al bucle
+  var startTime = null; // Momento inicial de la animación
+
+  function animateToLoop(currentTime) {
+    if (!startTime) startTime = currentTime; // Guardar el tiempo inicial
+    var elapsed = (currentTime - startTime) / 1000; // Tiempo transcurrido en segundos
+    var progress = Math.min(elapsed / duration, 1); // Progreso de 0 a 1
+    var easedProgress = easeInOutQuad(progress); // Aplicar suavizado
+    var currentFrame = easedProgress * (startLoopFrame); // Calcular el frame actual
+
+    animation9.goToAndStop(currentFrame, true); // Ir al frame correspondiente
+
+    if (progress < 1) {
+      // Continuar hasta completar la duración
+      requestAnimationFrame(animateToLoop);
+    } else {
+      // Activar bucle al final del segmento
+      animation9.loop = true; // Habilitar el bucle
+      animation9.playSegments([startLoopFrame, totalFrames], true); // Reproducir el bucle final
+    }
+  }
+
+  // Función de easing para suavizar la progresión
+  function easeInOutQuad(t) {
+    return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+  }
+
+  // Iniciar la animación con aceleración suave hacia el bucle
+  requestAnimationFrame(animateToLoop);
+});
