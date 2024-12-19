@@ -53,13 +53,13 @@
     background-color: #fafafa;
     border: none;
     border-radius: 50%;
-    padding: 14px 16px;
+    padding: 14px 14px 14px 17px;
     cursor: pointer;
     transition: scale 0.3s;
 }
 
 .play-button:hover {
-    scale: 1.05;
+    scale: 1.06;
 }
 
 /* Estilo del iframe de video */
