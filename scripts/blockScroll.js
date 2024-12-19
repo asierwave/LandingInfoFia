@@ -56,8 +56,8 @@ function openMenu() {
 
   menu.classList.add('open');
   body.classList.add('menu-open');
-  // main.style.marginTop='260px';
-  main.style.marginTop='300px';
+  // main.style.marginTop='260px' '300px';
+  main.style.marginTop='235px';
   IconMouse.innerHTML = "&#10006;";
 
 

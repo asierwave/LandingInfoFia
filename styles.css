@@ -29,6 +29,47 @@
 
 
 
+ /* Estilos para el contenedor del video */
+ .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Puedes ajustar el tamaño del video */
+    margin: 0 auto;
+}
+
+/* Estilos para la portada */
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    display: block;
+}
+
+/* Estilos para el botón de reproducción (Play) */
+.play-button {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 50%;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: scale 0.3s;
+}
+
+.play-button:hover {
+    scale: 1.05;
+}
+
+/* Estilo del iframe de video */
+iframe {
+    display: none; /* Se ocultará inicialmente */
+    width: 100%;
+    height:25vw; /* Tamaño ajustable */
+}
+
+
 
   
 
@@ -81,6 +122,12 @@ html {
     right: 0;
 }
 
+
+
+
+
+
+
 @media screen and (min-width: 800px) {
 
 
@@ -128,7 +175,18 @@ html {
 }
 
 
+
+
+
+
 @media screen and (max-width: 800px) {
+
+
+    iframe {
+        display: none; /* Se ocultará inicialmente */
+        width: 100%;
+        height:51vw; /* Tamaño ajustable */
+    }
 
     .navMasterList{
         justify-content: flex-start;
@@ -184,6 +242,59 @@ main {
     background-color: #000; 
     transition: margin-Top 0.3s ease; /* Animación de apertura */
 }
+
+
+
+.circuloinfo {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 2em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    color: #fafafa;
+    left: 700px;
+    top: 50%;
+    border-radius: 400px;
+    background-color: #010101;
+    cursor: pointer;
+    transition: scale 0.3s;
+
+
+
+}
+
+.circuloinfo p {
+    display: none;
+}
+
+.circuloinfo h2 {
+    display: flex;
+}
+
+.circuloinfo:hover {
+    scale: 1.06;   
+    mix-blend-mode: difference;
+    border: 2px solid #fafafa;
+}
+
+.circuloinfo:hover p {
+  display: flex;
+  color: #fafafa;
+}
+
+.circuloinfo:hover h2 {
+    display: none;
+  }
+
+
+
+
+
+
 
 h1 {
     font-size: 1.8em;
@@ -716,8 +827,9 @@ a {
 
 }
 
-#item1 {
+#item1h2 {
     cursor: url('Assets/images/globe.svg'), auto;
+    mix-blend-mode: normal;
     transition: backgroundColor 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 }
@@ -736,32 +848,45 @@ a {
 
 }
 
+#item1h2:hover {
+    filter: brightness(1.1);
+    background-color: #fafafa;
+    color: #000;
+    border-bottom: 1px solid #000;
+    margin: 0;
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 800px) {
 
-#item1:hover > * {
+#item1h2:hover {
     filter: brightness(1.1);
     background-color: #fafafa;
     color: #000;
     border-bottom: 1px solid #000;
     margin: 0;
+    text-decoration: underline;
 }
 
 
 
-#item1:hover #item1Redireccion {
+#item1h2:hover #item1Redireccion {
     display: inline;
     border: none;
+    z-index: 99999;
 }
 
 }
 
-#item1:active {
+#item1h2:active {
     filter: brightness(1.1);
     background-color: #fafafa;
     color: #000;
     border-bottom: 1px solid #000;
     margin: 0;
 }
+
+
 
 
 
@@ -1157,6 +1282,12 @@ form label input {
 
 
 @media screen and (max-width: 800px) {
+
+.circuloinfo {
+    display: none;
+}
+
+
 
 .mensajeinfo {
     display: flex;

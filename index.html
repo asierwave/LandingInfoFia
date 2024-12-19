@@ -39,8 +39,8 @@
         <div class="menu">
             <div class="submenu">
                 <a href="#a2" class="menucard"><h2>El Evento</h2><h2>&#62;</h2></a>
-                <a href="#a3" class="menucard"><h2>Programa</h2><h2>&#62;</h2></a>
-                <a href="#a4" class="menucard"><h2>Asiste a InfoFIA</h2><h2>&#62;</h2></a>
+                <a href="#a3" class="menucard"><h2>Archivo del Evento</h2><h2>&#62;</h2></a>
+                <!-- <a href="#a4" class="menucard"><h2>Asiste a InfoFIA</h2><h2>&#62;</h2></a> -->
                 <a href="https://filosofiacst.net/" target="_blank" class="menucard"><h2>Máster FCST</h2><h2>&#62;</h2></a>
             </div>
 
@@ -64,7 +64,7 @@
         
    <main>
 
-
+  
 
     <!-- <a id="anim9" class="enlaceTransmision" href="https://ehutb.ehu.eus/live/58c6bac5f82b2b083f8b456d" target="_blank"></a> -->
     
@@ -84,7 +84,7 @@
 
     <section class="content">
 
-
+      
 
 
              <!-- Mouse scroller -->
@@ -162,7 +162,12 @@
        
 
     </section>
+
         <!-- <div id="anim5"></div> -->
+        <a href="#a3" class="circuloinfo">
+            <h2>Por si te lo perdiste...</h2> <p>Accede ahora a las grabaciones del evento con un click</p>
+        </a>
+
 
     <section class="contentb" id="a2">
 
@@ -171,7 +176,7 @@
                 <h1>InfoFIA: Jornada de Informática, Filosofía e IA</h1>
          
         <p>Las Jornadas InfoFIA representan un proyecto colaborativo entre la Facultad de Informática de Donostia/San Sebastián y la Facultad de Educación, Flosofía e Antropología, con el objetivo de abrir un espacio de reflexión y diálogo en torno a la inteligencia artificial (IA). Este evento busca explorar tanto las dimensiones técnicas y filosóficas de la IA como su impacto en el ámbito social, político y cultural.</p>
-        <p>El encuentro se celebrará el jueves 12 de diciembre en la Sala Ada Lovelace de la Facultad de Informática. Fiel a su propósito de promover una interacción interdisciplinar, el evento está abierto a toda persona interesada en estas temáticas, sin requerir conocimientos previos en filosofía o informática.</p>
+        <p>El encuentro se celebró el jueves 12 de diciembre en la Sala Ada Lovelace de la Facultad de Informática. Fiel a su propósito de promover una interacción interdisciplinar, el evento está abierto a toda persona interesada en estas temáticas, sin requerir conocimientos previos en filosofía o informática.</p>
         </div>
 
 
@@ -201,7 +206,7 @@
         <article class="horarios">
 
             <div class="titulo">
-                <h1>Programa</h1>
+                <h1>Archivo del evento</h1>
             </div>
             
     
@@ -209,40 +214,76 @@
     
             <div class="list">
                 <div class="titulo">
-                    <h3>13:00-14:30 Conferencia Inaugural</h3>
+                    <h3>Conferencia Inaugural</h3>
                 </div>
     
-                <a href="https://xabier.barandiaran.net/" class="item" id="item1" target="_blank">
+                <div class="item" id="item1">
                     <div id="item1Redireccion">Clicka para ir a su web</div>
-                    <img src="Assets/xabier.jpg" alt="Foto de Xabier Barandiaran">
-                    <h2>Xabier Barandiaran</h2>
+                    <!-- <img src="Assets/xabier.jpg" alt="Foto de Xabier Barandiaran"> -->
+                    <div class="video-container">
+                        <!-- Imagen de la portada -->
+                        <img src="Assets/images/mesa.jpg" alt="Portada del Video" class="video-thumbnail" id="videoThumbnail">
+                        
+                        <!-- Botón de Reproducción -->
+                        <button class="play-button" id="playButton">&#9654;</button>
+                    
+                        <!-- Iframe del Video -->
+                        <iframe id="videoIframe" src="https://www.youtube.com/embed/PczZ4_L-cQ0?autoplay=1" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://xabier.barandiaran.net/" target="_blank"> <h2 id="item1h2">Xabier Barandiaran</h2></a>
                     <h3>Transformar la Humanidad: el modo de existencia de la IA generativa en la sociedad contemporánea</h3>
-                    <p>Filósofo de la UPV/EHU experto en cognición y en la intersección entre tecnología y política, abordará en esta conferencia cómo la IA generativa se está integrando en las estructuras cognitivas individuales, sociales y políticas actuales, transformando las formas de interacción humana y el desarrollo cultural.</p>
-                </a> 
+                    <p>Filósofo de la UPV/EHU experto en cognición y en la intersección entre tecnología y política, aborda en esta conferencia cómo la IA generativa se está integrando en las estructuras cognitivas individuales, sociales y políticas actuales, transformando las formas de interacción humana y el desarrollo cultural.</p>
+                </div> 
            
     
                 <div class="titulo">
-                    <h3>16:00 – 16:45 Conferencia</h3>
+                    <h3>Conferencia</h3>
                 </div>
     
                 <div class="item" id="item5">
-                    <img src="Assets/images/miren.jpg" alt="Foto de Miren Gutiérrez">
+                    <!-- <img src="Assets/images/miren.jpg" alt="Foto de Miren Gutiérrez"> -->
+                    <div class="video-container">
+                        <!-- Imagen de la portada -->
+                        <img src="Assets/images/mesa-3.jpg" alt="Portada del Video" class="video-thumbnail" id="videoThumbnail">
+                        
+                        <!-- Botón de Reproducción -->
+                        <button class="play-button" id="playButton">&#9654;</button>
+                    
+                        <!-- Iframe del Video -->
+                        <iframe id="videoIframe" src="https://www.youtube.com/embed/P5auNa2uMSU?autoplay=1" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <h2>Miren Gutiérrez</h2>
                     <h3>Poder, género y discurso en la era de las plataformas</h3>
-                    <p>Investigadora de la Universidad de Deusto es experta en feminismo y activismo de datos que actualmente estudia el auge del antifeminismo, ofrecerá una mirada crítica sobre las plataformas digitales y el papel de la IA en la creación y propagación de discursos de poder y género, analizando cómo estas tecnologías influyen en las dinámicas sociales contemporáneas.</p>
+                    <p>Investigadora de la Universidad de Deusto es experta en feminismo y activismo de datos que actualmente estudia el auge del antifeminismo, ofrece una mirada crítica sobre las plataformas digitales y el papel de la IA en la creación y propagación de discursos de poder y género, analizando cómo estas tecnologías influyen en las dinámicas sociales contemporáneas.</p>
 
     
                 </div>
     
                 <div class="titulo">
-                    <h3>16:45 – 17:30 Conferencia</h3>
+                    <h3>Conferencia</h3>
                 </div>
     
                 <div class="item" id="item2">
-                    <img src="Assets/images/aitor.jpeg" alt="Foto de Aitor González">
+                    <!-- <img src="Assets/images/aitor.jpeg" alt="Foto de Aitor González"> -->
+                    <div class="video-container">
+                        <!-- Imagen de la portada -->
+                        <img src="Assets/images/mesa-4.jpg" alt="Portada del Video" class="video-thumbnail" id="videoThumbnail">
+                        
+                        <!-- Botón de Reproducción -->
+                        <button class="play-button" id="playButton">&#9654;</button>
+                    
+                        <!-- Iframe del Video -->
+                        <iframe id="videoIframe" src="https://www.youtube.com/embed/dzeR41BQAvw?autoplay=1" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                     <h2>Aitor Gonzalez</h2>
                     <h3>Salamandra: Cómo desarrollar una IA pública</h3>
-                    <p>Investigador en el Barcelona Supercomputing Centre y responsable del desarrollo del primer modelo público de IA, presentará el proyecto Salamandra, una iniciativa que busca democratizar el acceso a la IA, destacando la importancia de modelos de inteligencia artificial de código abierto y accesibles para el bien común.</p>
+                    <p>Investigador en el Barcelona Supercomputing Centre y responsable del desarrollo del primer modelo público de IA, presenta el proyecto Salamandra, una iniciativa que busca democratizar el acceso a la IA, destacando la importancia de modelos de inteligencia artificial de código abierto y accesibles para el bien común.</p>
                 </div>         
     
 
@@ -259,7 +300,7 @@
 
 <div class="list">
     <div class="titulo">
-        <h3>18:00 – 19:00 Mesa Redonda</h3>
+        <h3>Mesa Redonda</h3>
     </div>
     
     <div class="item">
@@ -267,7 +308,19 @@
     </div>
 
     <div class="item" id="item4">
-        <img src="Assets/images/bedia.jpg" alt="Foto de Manuel Bedia">
+        <div class="video-container">
+            <!-- Imagen de la portada -->
+            <img src="Assets/images/mesa-12.jpg" alt="Portada del Video" class="video-thumbnail" id="videoThumbnail">
+            
+            <!-- Botón de Reproducción -->
+            <button class="play-button" id="playButton">&#9654;</button>
+        
+            <!-- Iframe del Video -->
+            <iframe id="videoIframe" src="https://www.youtube.com/embed/1lDgkkwZlFk?autoplay=1" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- <img src="Assets/images/bedia.jpg" alt="Foto de Manuel Bedia"> -->
         <h2>Manuel Bedia</h2>
         <p>Director General y Comisionado para la Nueva Economía de la Lengua (Ministerio de Asuntos Económicos y Transformación Digital), es un experto en IA y ciencias cognitivas.</p>
 
@@ -275,13 +328,13 @@
     </div>
     
     <div class="item" id="item3">
-        <img src="Assets/images/lola.jpg" alt="Foto de Lola Almendros">
+        <!-- <img src="Assets/images/lola.jpg" alt="Foto de Lola Almendros"> -->
         <h2>Lola Almendros</h2>
         <p>Investigadora de la Universidad de Salamanca especializada en tecnología y política, experta en la retroalimentación entre ambos campos en las sociedades actuales, así como los desafios éticos que supone.</p>
     </div>   
     <div class="mensajeinfo">
     <img src="Assets/images/info.png" alt="Icono de información">
-    <p>En esta mesa redonda también les acompañarán dos de los ponentes de las charlas anteriores: Miren Gutiérrez y Aitor González<p>
+    <p>En esta mesa redonda también intervienen dos de los ponentes de las charlas anteriores: Miren Gutiérrez y Aitor González<p>
     </div> 
 </div>
 
@@ -302,10 +355,10 @@
     <div class="description">
 
         <img src="Assets/images/informatika.jpeg" alt="Imagen de la facultad de informática de la UPV/EHU Donostia">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=43.30735807575452, -2.010610098144701" target="_blank" class="btn-mapa"> Cómo Llegar </a>
+        <!-- <a href="https://www.google.com/maps/dir/?api=1&destination=43.30735807575452, -2.010610098144701" target="_blank" class="btn-mapa"> Cómo Llegar </a> -->
 
         <p>
-               Esta jornada promete ser una valiosa oportunidad para explorar y comprender mejor los múltiples aspectos de la IA, tanto para especialistas como para el público en general. ¡Te esperamos para formar parte de este diálogo tan relevante y actual!</h4>
+               Esta jornada fue una valiosa oportunidad para explorar y comprender mejor los múltiples aspectos de la IA, tanto para especialistas como para el público en general. ¡Gracias por haber formado parte de este diálogo tan relevante y actual!</h4>
    
             </div>
 
@@ -327,23 +380,23 @@
    id="bootstrapForm"
    method="POST">
  <fieldset>
-     <h2>Este evento tiene plazas limitadas: ¿Nos podrías confirmar tu asistencia?<br></h2>
+     <h2>Este evento ha finalizado. ¡Gracias por asistir!<br></h2>
  </fieldset>
 
  <div class="divider"></div>
 
  <!-- Field type: "paragraph" id: "905896922" -->
- <fieldset>
+ <!-- <fieldset>
      <legend for="905896922">Indica tu nombre y apellidos</legend>
      <div class="form-group">
          <input id="1498135098" name="entry.1498135098" class="form-control" required></input>
      </div>
  </fieldset>
 
- <div class="divider"></div>
+ <div class="divider"></div> -->
 
  <!-- Field type: "checkboxes" id: "109089657" -->
- <fieldset class="fieldsetCheckbox">
+ <!-- <fieldset class="fieldsetCheckbox">
      <legend for="109089657">En caso de saberlo, indica a qué eventos asistirás:</legend>
      <div class="form-group" id="form-group-checkbox">
          <div class="checkbox">
@@ -371,13 +424,13 @@
              </label>
          </div>
      </div>
- </fieldset>
+ </fieldset> -->
 
- <input type="hidden" name="fvv" value="1">
+ <!-- <input type="hidden" name="fvv" value="1">
  <input type="hidden" name="fbzx" value="3890989100314537260">
- <input type="hidden" name="pageHistory" value="0">
+ <input type="hidden" name="pageHistory" value="0"> -->
 
- <input class="btn btn-primary" type="submit" value="Enviar">
+ <!-- <input class="btn btn-primary" type="submit" value="Enviar"> -->
 </form>
 
 
